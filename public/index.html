@@ -12,18 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <h1>Quantos dias se passaram desde seu acampamento Sênior/Juvenil?</h1>
         <p>Digite a data inicial de seu acampamento e descubra qual é o dia de sua vida nova.</p>
         
         <div class="input-group">
             <input type="date" id="dataAcampamento" required>
-            <button onclick="calcularDias()">Calcular</button>
+            <button type="button" onclick="calcularDias()">Calcular</button>
         </div>
         
         <p id="resultado"></p>
-    </div>
-
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
