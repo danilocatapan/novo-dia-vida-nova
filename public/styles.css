@@ -77,12 +77,16 @@ p {
     gap: var(--espacamento-pequeno);
 }
 
-input[type="date"] {
+input[type="date"], button {
     width: 100%;
     padding: var(--espacamento-medio);
     font-size: var(--fonte-paragrafo);
-    border: 2px solid var(--cor-primaria);
     border-radius: clamp(0.5rem, 3vw, 1rem);
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    border: 2px solid var(--cor-primaria);
     background: transparent;
     color: var(--cor-primaria);
     outline: none;
