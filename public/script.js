@@ -22,11 +22,15 @@ function calcularDias() {
 
     document.getElementById("resultado").innerText = `Hoje é o ${diferenca}º dia da sua vida nova!`;
 
-    // Remover depois e tratar com CSS
+    // Lógica para alterar a cor de fundo
     const anoAtual = new Date().getFullYear();
     if (anoAtual === 2024) {
-        document.body.style.backgroundColor = "rgb(13, 242, 65)"; // Verde
+        // Altera a variável CSS diretamente
+        document.documentElement.style.setProperty('--cor-fundo', 'rgb(0, 255, 0)'); // Verde
     } else {
-        document.body.style.backgroundColor = "rgb(231, 83, 84)"; // Vermelho/Rosa
+        document.documentElement.style.setProperty('--cor-fundo', 'rgb(231, 83, 84)'); // Vermelho/Rosa
     }
+
+    // Aplica a nova cor ao fundo
+    document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--cor-fundo');
 }
