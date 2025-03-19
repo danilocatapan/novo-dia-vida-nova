@@ -9,7 +9,7 @@ function calcularDias() {
     const dataAcampamento = new Date(dataInput);
     const hoje = new Date();
     
-    // Ajusta a data de hoje para ignorar a hora e comparar apenas as datas
+    // Ajusta para ignorar a hora
     hoje.setHours(0, 0, 0, 0);
     dataAcampamento.setHours(0, 0, 0, 0);
 
@@ -19,18 +19,23 @@ function calcularDias() {
     }
 
     const diferenca = Math.floor((hoje - dataAcampamento) / (1000 * 60 * 60 * 24));
-
     document.getElementById("resultado").innerText = `Hoje é o ${diferenca}º dia da sua vida nova!`;
 
-    // Lógica para alterar a cor de fundo
-    const anoAtual = new Date().getFullYear();
+    // Obtém o ano atual
+    const anoAtual = hoje.getFullYear();
+    console.log("Ano Atual:", anoAtual); // LOG PARA DEPURAÇÃO
+
     if (anoAtual === 2024) {
-        // Altera a variável CSS diretamente
         document.documentElement.style.setProperty('--cor-fundo', 'rgb(0, 255, 0)'); // Verde
+        console.log("Fundo alterado para verde"); // LOG PARA DEPURAÇÃO
     } else {
         document.documentElement.style.setProperty('--cor-fundo', 'rgb(231, 83, 84)'); // Vermelho/Rosa
+        console.log("Fundo alterado para vermelho"); // LOG PARA DEPURAÇÃO
     }
 
-    // Aplica a nova cor ao fundo
-    document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--cor-fundo');
+    // Aplica a cor corretamente
+    const novaCor = getComputedStyle(document.documentElement).getPropertyValue('--cor-fundo').trim();
+    document.body.style.backgroundColor = novaCor;
+
+    console.log("Cor final aplicada ao body:", novaCor); // LOG PARA DEPURAÇÃO
 }
