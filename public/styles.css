@@ -1,1 +1,73 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
+/* Definição do tema escuro */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Container principal */
+.container {
+    max-width: 500px;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo do input e botão */
+.input-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input */
+input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: white;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+/* Estilização do botão */
+button {
+    padding: 12px 20px;
+    background: #ff914d;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #ff732d;
+    transform: scale(1.05);
+}
+
+/* Estilo do resultado */
+#resultado {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: 600;
+}
