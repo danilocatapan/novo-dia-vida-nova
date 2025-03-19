@@ -6,10 +6,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Definição do tema escuro */
+/* Definição das cores do acampamento */
+:root {
+    --cor-texto: rgb(247, 215, 32); /* Amarelo */
+    --cor-fundo: rgb(231, 83, 84);  /* Vermelho/Rosa */
+    --cor-botao: rgb(247, 215, 32); /* Mesma cor do texto */
+    --cor-botao-hover: rgb(223, 195, 30); /* Tom mais escuro do amarelo */
+}
+
+/* Estilização geral do site */
 body {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -22,13 +30,13 @@ body {
 /* Container principal */
 .container {
     max-width: 500px;
-    background: #1e1e1e;
+    background: rgba(0, 0, 0, 0.2); /* Fundo levemente escuro para contraste */
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo do input e botão */
+/* Input e Botão */
 .input-group {
     margin-top: 20px;
     display: flex;
@@ -41,33 +49,35 @@ input {
     padding: 12px;
     font-size: 16px;
     border-radius: 8px;
-    border: 1px solid #ffffff;
+    border: 2px solid var(--cor-texto);
     background: transparent;
     color: white;
     outline: none;
     margin-bottom: 10px;
+    text-align: center;
 }
 
-/* Estilização do botão */
+/* Botão */
 button {
     padding: 12px 20px;
-    background: #ff914d;
+    background: var(--cor-botao);
     border: none;
     border-radius: 8px;
-    color: white;
+    color: black;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
 button:hover {
-    background: #ff732d;
+    background: var(--cor-botao-hover);
     transform: scale(1.05);
 }
 
-/* Estilo do resultado */
+/* Resultado */
 #resultado {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 15px;
-    font-weight: 600;
+    font-weight: bold;
 }
