@@ -10,5 +10,5 @@ function calcularDias() {
     const hoje = new Date();
     const diferenca = Math.floor((hoje - dataAcampamento) / (1000 * 60 * 60 * 24));
 
-    document.getElementById("resultado").innerText = `Se passaram ${diferenca} dias desde sua vida nova.`;
+    document.getElementById("resultado").innerText = `Hoje é o ${diferenca}º dia da sua vida nova!`;
 }
