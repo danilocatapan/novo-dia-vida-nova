@@ -21,11 +21,15 @@ jobs:
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v4
 
+      - name: Mover arquivos para o diretório correto
+        run: |
+          mkdir public-build
+          mv public/* public-build/
+      
       - name: Upload dos arquivos para GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public
+          path: public-build
 
       - name: Publicar no GitHub Pages
         uses: actions/deploy-pages@v4
-
