@@ -21,4 +21,12 @@ function calcularDias() {
     const diferenca = Math.floor((hoje - dataAcampamento) / (1000 * 60 * 60 * 24));
 
     document.getElementById("resultado").innerText = `Hoje é o ${diferenca}º dia da sua vida nova!`;
+
+    // Remover depois e tratar com CSS
+    const anoAtual = new Date().getFullYear();
+    if (anoAtual === 2024) {
+        document.body.style.backgroundColor = "rgb(13, 242, 65)"; // Verde
+    } else {
+        document.body.style.backgroundColor = "rgb(231, 83, 84)"; // Vermelho/Rosa
+    }
 }
