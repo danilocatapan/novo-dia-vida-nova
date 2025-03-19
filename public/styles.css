@@ -16,8 +16,6 @@
     --fonte-principal: 'Poppins', sans-serif;
     --fonte-titulo: 2.5rem;
     --fonte-paragrafo: 1.125rem;
-
-    --transition-speed: 0.3s;
 }
 
 /* Reset básico */
@@ -41,7 +39,7 @@ body {
 }
 
 /* || CONTAINER PRINCIPAL */
-.container {
+main.container {
     max-width: 90vw;
     min-height: 70vh;
     background: rgba(0, 0, 0, 0.2);
@@ -59,12 +57,14 @@ h1 {
     font-size: var(--fonte-titulo);
     margin-bottom: var(--espacamento-grande);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 p {
     font-size: var(--fonte-paragrafo);
     margin-bottom: var(--espacamento-medio);
     color: rgba(255, 255, 255, 0.9);
+    text-align: center;
 }
 
 /* || INPUT E BOTÃO */
@@ -72,6 +72,9 @@ p {
     width: 100%;
     max-width: 300px;
     margin: var(--espacamento-grande) auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-pequeno);
 }
 
 input[type="date"] {
@@ -103,7 +106,6 @@ button {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: var(--espacamento-pequeno);
 }
 
 button:hover {
