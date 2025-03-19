@@ -21,4 +21,7 @@ function calcularDias() {
     const diferenca = Math.floor((hoje - dataAcampamento) / (1000 * 60 * 60 * 24));
 
     document.getElementById("resultado").innerText = `Hoje é o ${diferenca}º dia da sua vida nova!`;
+
+    const container = document.querySelector('.container');
+    container.style.setProperty('--transition-speed', '0.3s');
 }
