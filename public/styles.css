@@ -1,37 +1,23 @@
 /* || INPUT E BOTÃO */
 .input-group {
-    width: 100%;
-    max-width: 400px;
-    margin: var(--espacamento-grande) auto;
     display: flex;
-    flex-direction: row; /* Alinha input e botão lado a lado */
+    flex-direction: row; /* Mantém input e botão na mesma linha */
+    align-items: center;
+    justify-content: center;
     gap: var(--espacamento-pequeno);
+    max-width: 350px;
+    margin: var(--espacamento-grande) auto;
 }
 
-input[type="date"] {
-    flex: 1; /* Faz o input ocupar o máximo de espaço disponível */
+input[type="date"], button {
+    flex: 1; /* Ambos ocupam espaço igual */
     padding: var(--espacamento-medio);
     font-size: var(--fonte-paragrafo);
-    border: 2px solid var(--cor-primaria);
     border-radius: clamp(0.5rem, 3vw, 1rem);
-    background: transparent;
-    color: var(--cor-primaria);
-    outline: none;
-    transition: all 0.3s ease;
 }
 
 button {
-    width: auto; /* Faz o botão ajustar o tamanho conforme necessário */
-    padding: var(--espacamento-medio);
-    background: var(--cor-botao);
-    border: none;
-    border-radius: clamp(0.5rem, 3vw, 1rem);
-    color: black;
-    font-size: var(--fonte-paragrafo);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap; /* Evita quebra de linha no botão */
+    max-width: 120px; /* Ajusta o tamanho do botão */
 }
 
 button:hover {
