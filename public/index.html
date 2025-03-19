@@ -4,73 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novo Dia Da Minha Vida Nova</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-        }
-        input, button {
-            margin: 10px;
-            padding: 10px;
-            font-size: 16px;
-        }
-        button {
-            cursor: pointer;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .error {
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h2>Novo Dia, Vida Nova</h2>
-        <p>Descubra quantos dias se passaram desde o seu acampamento Sênior/Juvenil.</p>
-        <input type="date" id="dataAcampamento" max="{{hoje}}">
-        <button onclick="calcularDias()">Calcular</button>
-        <p id="resultado"></p>
-        <p class="error" id="erro"></p>
-    </div>
-    
-    <script>
-        document.getElementById("dataAcampamento").setAttribute("max", new Date().toISOString().split("T")[0]);
+        <h1>Quantos dias se passaram desde seu acampamento Sênior/Juvenil?</h1>
+        <p>Digite a data do seu acampamento e descubra qual é o dia de sua vida nova.</p>
         
-        function calcularDias() {
-            const dataInput = document.getElementById("dataAcampamento").value;
-            const erro = document.getElementById("erro");
-            erro.innerText = "";
-            if (!dataInput) {
-                erro.innerText = "Por favor, insira uma data válida.";
-                return;
-            }
-            
-            const dataAcampamento = new Date(dataInput);
-            const hoje = new Date();
-            
-            if (dataAcampamento > hoje) {
-                erro.innerText = "A data não pode ser no futuro.";
-                return;
-            }
-            
-            const diferenca = Math.floor((hoje - dataAcampamento) / (1000 * 60 * 60 * 24));
-            document.getElementById("resultado").innerText = `Hoje é o ${diferenca}º dia da sua vida nova!`;
-        }
-    </script>
+        <div class="input-group">
+            <input type="date" id="dataAcampamento" required>
+            <button onclick="calcularDias()">Calcular</button>
+        </div>
+        
+        <p id="resultado"></p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
